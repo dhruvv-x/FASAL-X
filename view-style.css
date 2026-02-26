@@ -1,0 +1,165 @@
+body {
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 100%);
+  margin: 0;
+  padding: 40px 20px;
+  color: #1b5e20;
+  transition: background 0.5s ease-in-out;
+  animation: fadeInBody 1s ease-in;
+}
+
+@keyframes fadeInBody {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.container {
+  max-width: 2000px;
+  margin: auto;
+  background: #ffffff;
+  padding: 50px;
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(46, 125, 50, 0.2);
+  animation: slideUp 1.2s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(46, 125, 50, 0.3);
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+h1 {
+  text-align: center;
+  color: #1b5e20;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  border-bottom: 3px double #a5d6a7;
+  padding-bottom: 12px;
+  animation: glowText 3s infinite alternate;
+}
+
+@keyframes glowText {
+  from { text-shadow: 0 0 2px #a5d6a7; }
+  to { text-shadow: 0 0 12px #66bb6a; }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  animation: fadeInTable 1.5s ease-in;
+}
+
+@keyframes fadeInTable {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+th, td {
+  padding: 18px 50px;
+  border: 1px solid #c8e6c9;
+  text-align: center;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+th {
+  background: linear-gradient(120deg, #43a047, #388e3c);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+tr:nth-child(even) {
+  background-color: #f1f8e9;
+}
+
+tr:hover {
+  background-color: #dcedc8;
+  transform: scale(1.01);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+img {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.1) rotate(1deg);
+  box-shadow: 0 0 12px rgba(76, 175, 80, 0.5);
+}
+
+/* 🎨 Styled Button Example */
+button, .btn {
+  background: linear-gradient(to right, #4caf50, #2e7d32);
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(46, 125, 50, 0.3);
+}
+
+button:hover, .btn:hover {
+  background: linear-gradient(to right, #66bb6a, #388e3c);
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(46, 125, 50, 0.5);
+}
+
+/* ✏️ Stylish Inputs */
+input[type="text"], select, textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #a5d6a7;
+  border-radius: 8px;
+  background-color: #f9fff9;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #66bb6a;
+  box-shadow: 0 0 8px rgba(102, 187, 106, 0.4);
+}
+
+/* 🌐 Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 25px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  th, td {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  img {
+    width: 60px;
+    height: 60px;
+  }
+
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
